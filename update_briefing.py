@@ -20,99 +20,115 @@ def fetch_google_news_rss(query, limit=4):
     encoded_query = urllib.parse.quote(query)
     url = f"https://news.google.com/rss/search?q={encoded_query}+when:2d&hl=en-US&gl=US&ceid=US:en"
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-    
-    articles = []
+
+    items = []
     try:
         with urllib.request.urlopen(req, timeout=15) as resp:
             xml_data = resp.read()
         root = ET.fromstring(xml_data)
         for item in root.findall("./channel/item")[:limit]:
-            raw_title = item.findtext("title", default="").strip()
-            link = item.findtext("link", default="https://news.google.com").strip()
-            source = item.findtext("source", default="Google News").strip()
-            
-            # Clean trailing " - Source Name" from Google News RSS title
-            if " - " in raw_title:
-                clean_title = raw_title.rsplit(" - ", 1)[0].strip()
-            else:
-                clean_title = raw_title
+            raw_title = item.findtext("title") or ""
+            link = item.findtext("link") or "https://news.google.com"
+            source_el = item.find("source")
+            source = source_el.text if source_el is not None else "Global Wire"
 
-            articles.append({
+            # Strip trailing " - Source Name" from Google News titles
+            clean_title = raw_title.rsplit(" - ", 1)[0].strip()
+            items.append({
                 "title": clean_title,
                 "url": link,
                 "source": source
             })
     except Exception as e:
-        print(f"[RSS Error] {query}: {e}")
-    return articles
+        print(f"[WARN] RSS fetch failed for '{query}': {e}")
 
-def generate_ai_briefing(sector_title, articles, api_key):
-    """Call Gemini API (Free Tier) to synthesize a crisp 3-sentence institutional thesis."""
-    if not api_key or not articles:
-        return f"Institutional capital flows in {sector_title} remain anchored around supply-chain bottlenecks, capex durability, and rate-path sensitivity."
+    while len(items) < limit:
+        items.append({
+            "title": f"Monitoring latest {query.split()[0]} institutional developments",
+            "url": "https://news.google.com",
+            "source": "ee Wire"
+        })
+    return items
 
-    headlines_text = "\n".join([f"- {a['title']} ({a['source']})" for a in articles])
+def generate_ai_thesis(sector_title, headlines, api_key):
+    """Generate a 3-sentence institutional AI briefing via Gemini API (REST)."""
+    if not api_key:
+        return (
+            f"Institutional flows in {sector_title} remain anchored around supply-chain bottlenecks and capital allocation discipline. "
+            f"Recent headlines highlight shifting pricing power and policy sensitivity across market leaders. "
+            f"Monitor upcoming macro rate prints for near-term valuation multiple expansion or compression."
+        )
+
+    headline_bullets = "\n".join([f"- {h['title']}" for h in headlines])
     prompt = (
-        f"You are a senior macro-equity strategist writing a concise briefing for '{sector_title}'. "
-        f"Based strictly on these 4 headlines:\n{headlines_text}\n\n"
-        f"Write a sharp, institutional 2-to-3 sentence synthesis (max 45 words total). "
-        f"No bullet points, no markdown, no intro fluff. Focus on bottlenecks, pricing power, or rate sensitivity."
+        f"You are an institutional macro-equity strategist writing a concise 3-sentence briefing for the '{sector_title}' sector.\n"
+        f"Based on today's headlines below, write exactly 3 crisp, analytical sentences explaining the core structural bottleneck, "
+        f"capital flow trend, and macro rate/liquidity sensitivity. Do not use bullet points or markdown.\n\n"
+        f"Headlines:\n{headline_bullets}"
     )
 
     endpoint = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
     payload = json.dumps({
         "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {"temperature": 0.3, "maxOutputTokens": 120}
+        "generationConfig": {"temperature": 0.3, "maxOutputTokens": 180}
     }).encode("utf-8")
 
     req = urllib.request.Request(endpoint, data=payload, headers={"Content-Type": "application/json"}, method="POST")
     try:
         with urllib.request.urlopen(req, timeout=20) as resp:
-            result = json.loads(resp.read().decode("utf-8"))
-            text = result["candidates"][0]["content"]["parts"][0]["text"].strip()
-            return text.replace("\n", " ")
+            data = json.loads(resp.read().decode("utf-8"))
+            text = data["candidates"][0]["content"]["parts"][0]["text"].strip()
+            return " ".join(text.split())
     except Exception as e:
-        print(f"[Gemini API Error] {sector_title}: {e}")
-        return f"Market focus in {sector_title} centers on supply constraints and earnings durability amid evolving macro liquidity."
+        print(f"[WARN] Gemini API fallback for '{sector_title}': {e}")
+        return (
+            f"Capital allocation across {sector_title} continues to favor operators with durable pricing power and backlog visibility. "
+            f"Near-term sector dispersion reflects evolving rate expectations and physical supply constraints."
+        )
 
 def main():
     kst = timezone(timedelta(hours=9))
     now_kst = datetime.now(kst)
-    updated_at = now_kst.strftime("%b %d").upper()  # e.g., "NOV 24"
-    month_label = now_kst.strftime("%b %Y").upper() # e.g., "NOV 2026"
+    updated_at = now_kst.strftime("%b %d · %H:%M KST")
+    month_label = now_kst.strftime("%b %Y").upper()
+
     api_key = os.environ.get("GEMINI_API_KEY", "").strip()
 
-    # Load existing data.json to preserve manually curated macroEvents
-    existing_data = {}
+    # Load existing macroEvents if data.json exists so custom macro edits are preserved
+    existing_macro = []
     if os.path.exists("data.json"):
-        with open("data.json", "r", encoding="utf-8") as f:
-            existing_data = json.load(f)
+        try:
+            with open("data.json", "r", encoding="utf-8") as f:
+                old = json.load(f)
+                existing_macro = old.get("macroEvents", [])
+        except Exception:
+            pass
 
     updated_sectors = []
     for idx, cfg in enumerate(SECTOR_CONFIGS):
         print(f"Syncing sector: {cfg['title']}...")
         news_items = fetch_google_news_rss(cfg["query"], limit=4)
-        thesis = generate_ai_briefing(cfg["title"], news_items, api_key)
-
+        thesis = generate_ai_thesis(cfg["title"], news_items, api_key)
         updated_sectors.append({
             "id": cfg["id"],
             "title": cfg["title"],
             "active": True,
-            "isFresh": len(news_items) > 0 and idx < 3, # Highlight top 3 active movers
+            "isFresh": idx < 3,
             "news": news_items,
             "thesis": thesis
         })
 
     output = {
-        "monthLabel": existing_data.get("monthLabel", month_label),
+        "monthLabel": month_label,
         "updatedAt": updated_at,
-        "macroEvents": existing_data.get("macroEvents", []),
+        "macroEvents": existing_macro,
         "sectors": updated_sectors
     }
 
     with open("data.json", "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
-    print(f"Successfully updated data.json at {updated_at} KST.")
+
+    print(f"[OK] data.json updated successfully at {updated_at}")
 
 if __name__ == "__main__":
     main()
