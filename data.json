@@ -1,6 +1,6 @@
 {
   "monthLabel": "NOV 2026",
-  "updatedAt": "Nov 27 · 00:23 KST",
+  "updatedAt": "Nov 27 · 08:24 KST",
   "macroEvents": [],
   "sectors": [
     {
@@ -10,14 +10,14 @@
       "isFresh": true,
       "news": [
         {
+          "title": "South Korean Semiconductor Firms Need Profit Stability, Higher Shareholder Returns",
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOeF9XUDlJckQyRTM2QzZZUlY5QzRMOWxITjdJNVd4N2RUSW1LbUNSck52aHZ2UEZnTVFKdWs3dkluLVVqMjd6Sm5XSDVlNEZYRWU3emtWQkI1RzlRTzBRcFZTWU9VOWVtUENUWTBINGdEQ29Da0RUYk9DU2Q0eHdRTEJ0dVA3dTdVdmlrX2pB?oc=5",
+          "source": "조선일보"
+        },
+        {
           "title": "US Extends Prior-Approval Rule to 16nm Non-AI Chips, Creating China-Related Variable for Samsung Foundry",
           "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBFS09JS0lTQ2ZKU3dJTFVKRnB5QkE0OE13V2lnWExXN01sUWoxbjROaFQ1MlFTNDBSWVpFTjFvMExSNkViMmd3RjY0VEtVM2UxdVhkWWwtUDhlQlZzQlFGMGtSQmw3SUVTdUU1Z21pMmZVZURBYlE?oc=5",
           "source": "BigGo Finance"
-        },
-        {
-          "title": "South Korea's Semiconductor Valuation Gap: Contracts, Discipline, Customers",
-          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOR2tFTEwyd3RaWHp3VGJZRkNLZGxjQ2hjeG9kZmNNY1FieU9ubEhMQWhDYjBqa09IWUUxbWlrYjJHQXpRUVpueWhrX3hzME13MTVOeGNSWjJJRmtZcFVwZ25JeEZ0Qm5pTzZfQzV6TXRVY0NlWnl4eDBkNkJON0lyS0MtSHZfb0Y0aDRPeThB?oc=5",
-          "source": "조선일보"
         },
         {
           "title": "UBS sees Chinese AI chips taking 88% of China's market by 2028",
@@ -25,9 +25,9 @@
           "source": "MLQ.ai"
         },
         {
-          "title": "Follow the Smart Money: This Billionaire Tech Investor Has Been Loading Up On Shares of These 3 AI Chip Stocks",
-          "url": "https://news.google.com/rss/articles/CBMiogJBVV95cUxPVnpLa3piXzNTMmlHX2ZkTlN5ekNuQ3VESlpJcXRaQno5Z0ZKakd3Uk5uR3NHdy1NN19Bb1Rwbmk5LUh6Zm0yVzlPRHkzOUljUms3dlVwdk92NVJmaWJVRTMwZWZtU0tCZFhZQ3VqNmRfZHdudVRwTXpwLU5RanhyMTJxSWlnd1JCeG50UWU1S0pULU5laDlJUGVESFNzS2o0Z3BlSjQzWWxhMmdNY3RITndEVlRhdkE0czV0U2xXd0VPMXFiLVFCNDN6d0p1bmVFT1BCbnM1N2FxWllYV3VDTnVkeDJldURSbmFzWTg0bldiZDV5LXluZnIzM0VkVTZoWDR5MlBmeGpKUFZrcExLeHQzZ2dUNWhZSThRWTdsTktzUQ?oc=5",
-          "source": "The Globe and Mail"
+          "title": "Jensen Huang returns after 11 days... uncertainty eased for Samsung and SK Hynix : Business/Industry : JKN",
+          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1BNVBVRVItcWswMVZ6dUJCQ0hRX29XQTlZVmcxZzNMcW1oa2lnWmZ0QUdjdGdWakNEZFJIdk1vV2xqSEt5YlNXWHQzQVFOTzU4SE1JTUVTZWd6ODhrY3Z1MEdR?oc=5",
+          "source": "재경일보"
         }
       ],
       "thesis": "Institutional flows in AI & Chips remain anchored around supply-chain bottlenecks and capital allocation discipline. Recent headlines highlight shifting pricing power and policy sensitivity across market leaders. Monitor upcoming macro rate prints for near-term valuation multiple expansion or compression."
@@ -44,19 +44,19 @@
           "source": "WSJ"
         },
         {
-          "title": "A Happy Thanksgiving To The Bond Market",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBQNDBzYTBhd21hTy01aFRSWkJKaFkyRVdLYmdDb2NIQTV3T19kczRMU3dMMlVfb1RQZzh5RDNsckN5S0RNRkVzM0o3WDZoNEFrTWlOUUtfcGJjZmM0ZG9YVG05YzRDN2dqSXZTaW9ieE1veFhLZllmUnM1OXpkTm8?oc=5",
-          "source": "Seeking Alpha"
+          "title": "Gold slips, silver steadies as Fed rate hike expectations persist in holiday trading - Kitco AM Report",
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQNXFfM3AxNjAxLVVEMXMzVEhVc3FvUXFNaDFuRlV6dmlTVEpsNGdDZU5VOGZZWTh5eUJ5dWQzZlByZ2ZIcE9nX01Tak5KRDN6Q1Z2Z3Jqbk9WYzVYZVVtVjNobWxndnFSZk02TXo3Vlk2Z0pDZUFGbDZKSE00SXpVYWlSVmZjdWZmQ2xxUTF2RzZnYllpUUhaYm1SV1dGa0o3SUZndmd4dlFQSXNWN0gzUnhUbDZlQQ?oc=5",
+          "source": "Kitco"
+        },
+        {
+          "title": "Should You Tap Ultra-Short-Term Treasury Bond ETFs?",
+          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOWTFKdnZTT29yRWI4UWxuallCV3lKelNSUkhiRjhreE1TdnpTSk5jSWlDem5FWlVuSW1DZWxubkg0NFNWT2JqM1o0dWtIdFVxRDFiZ3hJdVE0Q0VJMkJLZGhMb0ZBbVN6MmJsRlhvRkVmQlFsdVdHMTNhRGhpcENGNzF0Y2xnaWRfaVpaOHBtVDQ0ZzJpR3Y2SlQ1dHBVa0lXamE0SGdma2xUUQ?oc=5",
+          "source": "TradingView"
         },
         {
           "title": "10-year Treasury yield slides despite sticky inflation data as investors buy bonds for protection",
           "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5FRFlwZF9FMHIyY3J2Y25STC10T25DTG9zTWFKcVNYOXdtM21rLVNZTXRoTWVqYUVWUEE5RFpURWVUd1kyanJHNWJzaXRmTkJHMFZGTWV0U3RSdVpyc0h5NGEyQkEtS1RlZ2NUQWtHbFBVTUtucjJJ0gF8QVVfeXFMTThoU0xMTXQ1NFpvaUc1WHhNV3ExRTFFV05BWUUtTzk3SzBtUjZxSXJLeXhOZDB6aDJHMzlDQ0gzT0RETnJDRlpEeW1SNFl1MEk1dXhBYllVdWNTOTVzbF9IaHFGNzhJZ0l6WVVDLWxPQjhSMkozQm1JNWxRbw?oc=5",
           "source": "CNBC"
-        },
-        {
-          "title": "Bond Traders Rush to Hedge Risk of Fed Hikes Stalling Economy",
-          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOTks3ZzVpZ2RhN2hxV1hPSlJ2T3c2ZGZrVWtKRktucmtOR3QtaWNHQ2drajdHQS1wT3BQbTJzQnBDZmhWaTgwZU1kWUxvd0w4YUVPdGVwTlZjWnNLT2tib053VjJCTno3dVZvM1Q5SGktcUp6QVV4cVotOGd5bVRSQ1AxOHBGUjViMVVCQ05KNHRLSlpxNENRM25KYTZUYnJlUHc5bnhYUzVwdnRfNmxxdmxR?oc=5",
-          "source": "Bloomberg.com"
         }
       ],
       "thesis": "Institutional flows in Rates & Bonds remain anchored around supply-chain bottlenecks and capital allocation discipline. Recent headlines highlight shifting pricing power and policy sensitivity across market leaders. Monitor upcoming macro rate prints for near-term valuation multiple expansion or compression."
@@ -67,11 +67,6 @@
       "active": true,
       "isFresh": true,
       "news": [
-        {
-          "title": "Transformers are in short supply worldwide, potentially slowing the energy transition and affecting economic growth as demand for electricity infrastructure continues to rise. #DWBusiness",
-          "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQckN6dm0wQjdsdmRJd3MzOFFRR3NTVXA5R3lfTkh6YWhOaGdSdS12ZmdWNExldTVDN2J4eUpYMWRHRjNOeGJzbnpmckhUeFJ3S1VTb2s2dW9SREQ5SkZpOU93cng1Q1RxRFhvUGM0UVhsS2lpU0Z3NXltdWlndk5pRkU2d3FwWFIzbkkxSG5udEJrMS1Hb1FBV3VVTFR1MDFrRldsdThWYjRzV2dqem5DMlNXUGFyRTdlelB6MEZ2Mk05S1ctUFNTSnNpLVNYaElDZktWUUZJbTE?oc=5",
-          "source": "Facebook"
-        },
         {
           "title": "Alabama Power proposes $160M rate cut, cites data center growth",
           "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNOEpDdUVsTE83VmFNQjBLZXRwZDBfbW9MX0gtZFVLMEFtRkFYZDdPUXpUeTJYVTZ2bmNJelZDSDFMX0hqalhEZE1DNXRUamRzZTNLeUdxaHJ5LXdXeTZxOTZRQVg4N2RfUVkxcldxMVBCc1hqS1dMc3BOa19QbUJpZUhqeVB3RTJzNWtoMkstbU9GNGfSAZgBQVVfeXFMTzJKSWdlT3ZFVDdHNzRkbjF4d3VKTmlyNkZaQi0yN2FZX2RWNXoxTDM0V2Q5NVJGOW8yNFRQeWdWMU9HNjVwNTNxTUczbERxdE9QZlhFRmRCUnhDZ1oyMW9jVTgzTVIxbm5FSUpWX1JPSHZRdkVUWWJzNlZrdWpBbUUyZFJKT3I1UGh5Y09udHFPeDVVTjUzVno?oc=5",
@@ -86,6 +81,11 @@
           "title": "Domestic Copper Components Emerging as Critical Resource for AI, Utilities Ahead of Expanded FEOC Restrictions",
           "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPZnkwdDZqdUdDWXh1QzVBTU10ajYxVzlpWDRoTjZoTC1xRHlFV3J2MmcySFZjVl9RRmw3RzhhUmhKbkVtbl80WkdNcUJ6eWN4NDZ5am1lb1ZBS2p6MHZtWTVld3hHR2wxckViYk1uTlhGZjEtc0VKVk9SV0VRSlV5RXdNQzFndmlUSEp4aUlISGxtcDRDQVJqc0ZocUh4a0Zzc3BrbVRmVGg0TDMzU2FpUnRfcGthcWlEZnFvYlJDdXM1eG0wbHk0TTkwVy1uS2Fpbkw3Vnk1UTVlNFByOUxzb1BRdzNHWHdKX3BobkktQVozLW1WZDh5Sw?oc=5",
           "source": "EnergyTech"
+        },
+        {
+          "title": "Williamson County booming with names like Dell, Samsung. Enter, a small startup.",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNd2FXSXhjMW9CWGxxeWNoUFdCZzE0YnBjbm0yVVhfQ2lYRElBS2tiX1R5Yno3NHlzWmotR0ljamplN3o4aHVTUnJ5WkVMUjNMU21NX2I3M0J1QjFMem1ZZXgzSVdka3FpY0xHalJFcnJrdUlGZ0VIcjBHMTY4Nk1QRzB4RHp4WHJjT3VDemh5cTBqemwtVmsxVWlSelE0NktIRGdVeG5LUDc?oc=5",
+          "source": "Austin American-Statesman"
         }
       ],
       "thesis": "Institutional flows in Power & Grid remain anchored around supply-chain bottlenecks and capital allocation discipline. Recent headlines highlight shifting pricing power and policy sensitivity across market leaders. Monitor upcoming macro rate prints for near-term valuation multiple expansion or compression."
@@ -107,9 +107,9 @@
           "source": "Seeking Alpha"
         },
         {
-          "title": "With Planned $41B Insmed Acquisition, Sanofi Inks Year's Biggest M&A Deal",
-          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPUEY3SXUxQjlJZnNlbzdPSEpyTWpoQTVoVGtRcnIyTnZBMXltbUZ4azdsVHBLbXljZDRBZ0tXRjViWmU4QmpOd2pFaUk0UkxVUFdtTGttR2pUckxoMkpva2MzcEFDaElYSk42QU9QdlJaRURLNHpsbl82VXhkNE9TSFc0MTljMF9RZDJfTC00QnFiNjc1ZzVpRThzbEVESmFGNklEQzkyRWFwNmR2bUM0WGx3eEJxZmFGSXk0aVkySkhSRjhpeVE?oc=5",
-          "source": "Genetic Engineering and Biotechnology News"
+          "title": "Monitoring latest biotech institutional developments",
+          "url": "https://news.google.com",
+          "source": "ee Wire"
         },
         {
           "title": "Monitoring latest biotech institutional developments",
@@ -131,14 +131,14 @@
           "source": "PwC"
         },
         {
-          "title": "Ethereum Foundation Says AI Is a More Urgent Threat Than Quantum Computing",
-          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOR3ZjR2lMSmpZNjN1eXFyUWJRZHBleHZRWUQ5MEcxSzEzM0wwZmNGMm1lMjU2VEpFbUpkNENQVUdCMGNMY0hXcjFXZnBEWWlWTXltU2Q2REJmdWRBeXNVdldZMDBsc293aXRYSUJaQ3NWR29NYk9rUmlOcjJwRndSMzNpQkRWQzdLWElDa3p3?oc=5",
-          "source": "Decrypt"
+          "title": "Report: Crypto Market Maker Auros Begins Winding Down Operations",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPa2I0bVk1WkV6UDZkOXQ0LWItQUxhR1FUUmhBNlNnZ1lCRjZtMkpLZjlraWlyZkY1M3g0S19ISG5fX1duLW9RMFpTWGRPdnhpQjJPYndLYzlkVzhTOG9CZUk3TldRTmVnRUswTG5aSUk4NEx6U1JJMlVvUDd0b1doakVBM2dWY045UFZSVlZ1TWM?oc=5",
+          "source": "ForkLog"
         },
         {
-          "title": "Chula Experts Outline Thailand’s Path to Quantum Computing Opportunities",
-          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNbjRCenlRcmhubnFTa19QYlRsSzBJeEhtLWVNb3NqRHl6MVF0NVF5Z3JjelVDRnNWdU5BOVAyOEZHLUQzMVdHMFltLW5RRDNTd195Z3E4Z29NNEhZU1pwVGoxcUN1VVVWU1RmYkNJUTZVTU5zX3JCU3FmS3hFcnRyenhMT3E4QkpoSTNfZDRNQ21JSDlQSDVxOExraTdGZm1iaFhSN2xoNFNQNFFCZTNBX3hiSU9xbjByLXpOdm1pdlJEcnBT?oc=5",
-          "source": "Cincinnati Enquirer"
+          "title": "Chula Experts Urge Thailand To Build Quantum Skills And Research",
+          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPQ2VQUnVYd3kwMVJKUVZzRHpEZHV2MW5pZHRBVDNxMHo5ckRZMDhfUEdDOEdXQk9fSm1nMzBneFRHSElTTVNBMzVYVldEM1h1dXNMMGFSZG1CRWRiX0JuR3lpX1JYMlpVcWFPVlJVOVBQTV8yLW5xc2VfQmo1UldMR1JWaFdNeHhnZUE?oc=5",
+          "source": "Quantum Zeitgeist"
         },
         {
           "title": "EU proposes a Quantum Act to turn quantum research into industry and prepare for post-quantum cryptography",
@@ -155,14 +155,14 @@
       "isFresh": false,
       "news": [
         {
-          "title": "A Startup Tied to Donald Trump Jr. Could Get a Historic $15 Billion Loan From the Pentagon",
-          "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9xektrOVZYeW9RR2I1bFdIU1c4TjZGN2dCY2x1WUdGZHN4VmlBRXdsVHlRVUdrS295blZxUW95WmU0cWJjTWVCcTdKaV8xOWNJN3BXR1BGNFU5VkpEZjc3Yk9Ya2NxZ2FEZUpjTEd2NE9MbEx2bXB1cE5FbVI?oc=5",
-          "source": "ProPublica"
-        },
-        {
           "title": "Lockheed Martin (LMT) Joins Pentagon Push To Scale Military Drone Production",
           "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNMjdYcHRwTVZrdXRQOG9na193UzZKUkRGSUxyUWtSRWpTU1FoMkg4SGdIOXFHaG1HVTNLRGY3V0JQWm93MEVFZF9NNWFkd3NQWXdsM2ZwUzlyVnZsVURVQkNzaUE5MEsyNTBlbFExbVhUVFJ4Vjd3ZmEyZzZCTXE0NFNERGkyY09tV3hvbWxvWU9wOUZZXzM5dWRNREF5Qksz?oc=5",
           "source": "Yahoo Finance"
+        },
+        {
+          "title": "Pentagon in Talks With Ford, GM to Expand Military Drone Production",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxONl9ZZU9kRkJOOG1lY1ZIUi12QVlLSG9GRXRwS3E0ZTFEVFFMdXVQTzhWd2hnSndDLTN4bmtOWmFLT1o4SUt5YlRpb21zUV81RnhEYmZlTXhIdHFfMHI5RzlYS0pmY1lOMUxMaFpjc2U3LVZBZm9VV0toZld0d3RDTVp4ZWgtajBZa3kwY2EyN194UQ?oc=5",
+          "source": "The SOFX Report"
         },
         {
           "title": "After Pentagon Official Took Office, His Family Firm’s Clients Won Up to $3.5 Billion in Military Contracts",
@@ -170,9 +170,9 @@
           "source": "Drop Site News"
         },
         {
-          "title": "GM, Pentagon in preliminary talks about making drone parts",
-          "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQYmJaZzRoODRPaHk1SzZPOTFVcFl3R3UtSnVJSlhnTVA5b0lJUElkUW1Hb3hab0RLa29NMTRWZ2lETFdHNGZFLVRCbmlrdXFONGd0VGpBb1dxcTNTQk9fNVlmeFlZcjkya1l3UlRiN0ZrOC11NVhLd2FVZF9nZU5BekRCM2t3T2RUaXU3djg2V3ZJaFhuUmtuLUxaaGNRMHE2Zlp0MFZ4di0tUnlzNC1PSEg4bHhTak1xOWc1S2xNd1Ezb1FGMUVubmU5ZWNteU1sbDNROUYwS195NWJTbURwMVR3TDNjR1ZJ?oc=5",
-          "source": "The Detroit News"
+          "title": "Pentagon Retracts $16.1B Air Force Engine Contract, Says 58-Company Award Was Posted in Error",
+          "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOTnpwM0ZIZmlGcGYyUndMenF0S3hNSmUyRnVRU2RvS1VkVGctdEc0VTNsTGZpR3N5V2lpZURjSHc0blBCMW1sVFNraGFKYUlBWmI3UVptYVNGeVgzbVpYaGhxTFFBT250RmJCMklCYVNpeVpwMzlpaEcxaUlqRzJNZEVB0gGCAUFVX3lxTE5OenAzRkhmaUZwZjJSd0x6cXRLeE1KZTJGdVFTZG9LVWRUZy10RzRVM2xMZmlHc3lXaWllRGNIdzRuUEIxbWxUU2toYUphSUFaYjdRWm1hU0Z5WDNtWlhoaHFMUUFPbnRGYkIySUJhU2l5WnAzOWloRzFpSWpHMk1kRUE?oc=5",
+          "source": "The Defense Post"
         }
       ],
       "thesis": "Institutional flows in Defense remain anchored around supply-chain bottlenecks and capital allocation discipline. Recent headlines highlight shifting pricing power and policy sensitivity across market leaders. Monitor upcoming macro rate prints for near-term valuation multiple expansion or compression."
