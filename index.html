@@ -2,12 +2,12 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>ee — Macro × Micro Economics</title>
-  <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
-  <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
-  <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
-  <link href="[https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400;1,600&family=Noto+Sans+KR:wght@300;400;500;600&display=swap](https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400;1,600&family=Noto+Sans+KR:wght@300;400;500;600&display=swap)" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400;1,600&family=Noto+Sans+KR:wght@300;400;500;600&display=swap" rel="stylesheet">
   <script>
     tailwind.config = {
       theme: {
@@ -22,7 +22,7 @@
     body { background-color: #CFCED7; font-family: 'Inter', 'Noto Sans KR', sans-serif; -webkit-tap-highlight-color: transparent; user-select: none; }
     .satin-steel-bg {
       background-color: #EFEFED;
-      background-image: 
+      background-image:
         linear-gradient(135deg, rgba(255, 255, 255, 0.88) 0%, rgba(240, 240, 237, 0.65) 40%, rgba(225, 225, 220, 0.8) 100%),
         radial-gradient(ellipse at 15% 0%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0) 65%),
         radial-gradient(ellipse at 85% 100%, rgba(0, 0, 0, 0.04) 0%, rgba(0, 0, 0, 0) 70%);
@@ -30,7 +30,7 @@
     }
     .satin-steel-bg::before {
       content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='[http://www.w3.org/2000/svg'%3E%3Cfilter](http://www.w3.org/2000/svg'%3E%3Cfilter) id='satinNoise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.008 0.95' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23satinNoise)' opacity='0.025'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='satinNoise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.008 0.95' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23satinNoise)' opacity='0.025'/%3E%3C/svg%3E");
       pointer-events: none; z-index: 1;
     }
     .no-scrollbar::-webkit-scrollbar { display: none; }
@@ -47,11 +47,11 @@
   </style>
 </head>
 <body class="flex items-center justify-center min-h-screen p-0 sm:p-4 overflow-x-hidden">
-  <div class="w-full max-w-[412px] h-[100vh] sm:h-[844px] satin-steel-bg text-satin-dark flex flex-col justify-between overflow-hidden sm:rounded-[44px] shadow-2xl border-0 sm:border border-stone-300 relative">
+  <div class="w-full max-w-[412px] h-[100vh] h-[100dvh] sm:h-[844px] satin-steel-bg text-satin-dark flex flex-col justify-between overflow-hidden sm:rounded-[44px] shadow-2xl border-0 sm:border border-stone-300 relative">
     <header class="z-20 flex items-center justify-between px-6 pt-6 pb-3 bg-transparent">
       <div class="text-2xl font-serif italic tracking-tighter font-semibold select-none cursor-pointer" onclick="goToPage(0); scrollToToday();">ee</div>
       <div id="header-right-action" class="flex items-center space-x-2">
-        <span id="macro-month-label" onclick="scrollToToday()" title="Scroll to TODAY" class="text-[10px] font-semibold tracking-widest text-satin-muted hover:text-satin-dark uppercase select-none cursor-pointer transition-colors">NOV 2026</span>
+        <span id="macro-month-label" onclick="scrollToToday()" title="Scroll to TODAY" class="text-[10px] font-semibold tracking-widest text-satin-muted hover:text-satin-dark uppercase select-none cursor-pointer transition-colors"></span>
         <button id="sector-plus-btn" onclick="openSectorModal()" class="hidden w-9 h-9 items-center justify-center rounded-full hover:bg-black/5 active:scale-95 transition-all text-xl font-light">+</button>
       </div>
     </header>
@@ -77,7 +77,7 @@
         <div class="flex items-center justify-between pb-5 border-b border-satin-dark/10">
           <div>
             <h2 id="detail-title" class="text-xl font-semibold tracking-tight text-satin-dark">AI & Chips</h2>
-            <div id="detail-updated" class="text-[10px] text-satin-muted tracking-wider uppercase font-medium mt-0.5">Updated Nov 24</div>
+            <div id="detail-updated" class="text-[10px] text-satin-muted tracking-wider uppercase font-medium mt-0.5"></div>
           </div>
           <button onclick="closeSectorDetail()" class="w-9 h-9 flex items-center justify-center rounded-full hover:bg-black/5 active:scale-95 transition-all text-xl font-light">×</button>
         </div>
@@ -107,10 +107,10 @@
     <div id="macro-modal" class="fixed inset-0 z-40 bg-black/20 backdrop-blur-[2px] opacity-0 pointer-events-none transition-opacity duration-300 flex items-end justify-center sm:absolute">
       <div id="macro-sheet" class="w-full bg-[#FAFAFA] rounded-t-[32px] p-6 border-t border-satin-dark/10 shadow-2xl translate-y-full transition-transform duration-300 ease-out">
         <div class="flex justify-between items-center mb-4">
-          <div id="modal-date" class="text-xs font-medium text-satin-muted tracking-wider uppercase">NOV 24</div>
+          <div id="modal-date" class="text-xs font-medium text-satin-muted tracking-wider uppercase"></div>
           <button onclick="closeMacroModal()" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-black/5 text-lg font-light">×</button>
         </div>
-        <h3 id="modal-title" class="text-lg font-semibold text-satin-dark mb-4">FOMC Minutes Release</h3>
+        <h3 id="modal-title" class="text-lg font-semibold text-satin-dark mb-4"></h3>
         <div class="space-y-3.5 border-t border-satin-dark/10 pt-4">
           <div><span class="text-[11px] font-semibold text-satin-muted tracking-wider uppercase">1. Macro Catalyst</span><p id="modal-cause" class="text-xs text-satin-dark/80 mt-0.5 leading-relaxed"></p></div>
           <div><span class="text-[11px] font-semibold text-satin-muted tracking-wider uppercase">2. Rates & Liquidity Shock</span><p id="modal-impact" class="text-xs text-satin-dark/80 mt-0.5 leading-relaxed"></p></div>
@@ -120,7 +120,7 @@
     </div>
 
     <div id="sector-modal" class="fixed inset-0 z-40 bg-black/20 backdrop-blur-[2px] opacity-0 pointer-events-none transition-opacity duration-300 flex items-center justify-center p-6 sm:absolute">
-      <div class="w-full max-w-[340px] bg-[#FAFAFA] rounded-3xl p-6 border border-satin-dark/10 shadow-2xl scale-95 transition-transform duration-200">
+      <div id="sector-modal-card" class="w-full max-w-[340px] bg-[#FAFAFA] rounded-3xl p-6 border border-satin-dark/10 shadow-2xl scale-95 transition-transform duration-200">
         <div class="flex justify-between items-center mb-4">
           <h3 class="text-sm font-semibold text-satin-dark tracking-tight">Manage Sectors</h3>
           <button onclick="closeSectorModal()" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-black/5 text-lg font-light">×</button>
@@ -146,22 +146,38 @@
   </div>
 
   <script>
-    let currentPage = 0;
-    let lastUpdatedLabel = 'Updated Nov 24';
+    /* =====================================================================
+       DATA FORMAT NOTE (for whoever edits data.json):
+       - macroEvents[].date : "YYYY-MM-DD" (preferred) or "NOV 24"
+       - macroEvents[].status is IGNORED. past / today / upcoming is computed
+         from the device's current date every time the app opens, when the
+         app returns to the foreground, and when midnight passes.
+       - monthLabel is IGNORED. It is computed from today's date.
+       ===================================================================== */
 
-    let macroEvents = [
-      { id: 'node-0', date: 'NOV 12', status: 'past', headline: 'US Core CPI Print', delta: '+0.2% MoM · In-Line', cause: 'Shelter disinflation offset sticky core services, keeping annual core inflation anchored near 2.8%.', impact: '2Y Treasury yield eased 6bps as near-term hike tail risk faded from OIS pricing.', transmission: 'Relieved duration pressure on long-cycle Biotech and software valuations.' },
-      { id: 'node-1', date: 'NOV 13', status: 'past', headline: 'US PPI Wholesale', delta: '+0.1% MoM · Soft', cause: 'Declining freight and energy input costs compressed pipeline goods inflation.', impact: 'Reinforced market consensus for a measured Fed easing path into 2027.', transmission: 'Improved gross margin outlook for industrial hardware and power equipment makers.' },
-      { id: 'node-2', date: 'NOV 15', status: 'past', headline: 'US Retail Sales', delta: '+0.4% MoM · Beat', cause: 'Resilient upper-income spending and early holiday e-commerce demand outperformed consensus.', impact: '10Y yield climbed 5bps as soft-landing growth expectations strengthened.', transmission: 'Supported cyclical rotation while keeping real rates elevated for capital-intensive grids.' },
-      { id: 'node-3', date: 'NOV 18', status: 'past', headline: '10Y Treasury Auction', delta: '4.28% · Tail +1.8bp', cause: 'Primary dealer takedown rose amid ongoing fiscal deficit supply concerns.', impact: 'Term premium widened slightly, steepening the 2s10s curve by 4bps.', transmission: 'Tightened financing spreads for mid-cap infrastructure and defense contractors.' },
-      { id: 'node-4', date: 'NOV 19', status: 'past', headline: 'NVIDIA Q3 Earnings', delta: 'Rev +58% YoY · Beat', cause: 'Hyperscaler capex for next-gen rack-scale AI clusters exceeded supply allocations.', impact: 'Triggered broad risk-on flows across US equity indices and semiconductor ETFs.', transmission: 'Accelerated optical interconnect, CoWoS packaging, and data center power grid bottlenecks.' },
-      { id: 'node-5', date: 'NOV 24', status: 'today', headline: 'FOMC Minutes Release', delta: 'Rate Hold · Neutral', cause: 'Committee members debated the neutral rate ceiling amid resilient productivity gains.', impact: 'Front-end yields remain range-bound; dollar index stabilizes near 104.2.', transmission: 'Markets pivot focus from rate trajectory to sector-level earnings durability and capex ROI.' },
-      { id: 'node-6', date: 'NOV 26', status: 'upcoming', headline: 'Core PCE Price Index', delta: 'Est. +0.2% MoM', cause: 'Fed’s preferred inflation gauge will confirm whether healthcare and insurance costs moderated.', impact: 'A 0.1% downside surprise could unlock a 10–15bp rally in long-end Treasuries.', transmission: 'Direct catalyst for rate-sensitive Biotech funding windows and utility capex multiples.' },
-      { id: 'node-7', date: 'DEC 01', status: 'upcoming', headline: 'ISM Manufacturing PMI', delta: 'Est. 49.6 · Rebound', cause: 'New orders sub-index watched closely for signs of industrial restocking cycle.', impact: 'A print above 50.0 would lift cyclical yields and industrial commodities.', transmission: 'Key barometer for Power & Grid transformers, copper demand, and defense supply chains.' },
-      { id: 'node-8', date: 'DEC 04', status: 'upcoming', headline: 'US Nonfarm Payrolls', delta: 'Est. +165K · 4.1%', cause: 'Labor market cooling pace and average hourly earnings will anchor December FOMC odds.', impact: 'High-volatility event for 2Y yields and USD liquidity conditions.', transmission: 'Shapes consumer credit stability and broad equity risk premia heading into year-end.' },
-      { id: 'node-9', date: 'DEC 10', status: 'upcoming', headline: 'ECB Policy Decision', delta: 'Est. -25bps Cut', cause: 'Weak Eurozone industrial output widens policy divergence versus the Federal Reserve.', impact: 'Potential EUR/USD pressure and cross-border capital inflows into US credit.', transmission: 'Favors US-domiciled defense and AI infrastructure leaders with global pricing power.' },
-      { id: 'node-10', date: 'DEC 16', status: 'upcoming', headline: 'FOMC Rate Decision', delta: 'Est. Hold · Dot Plot', cause: 'Updated Summary of Economic Projections (SEP) will reset 2027 terminal rate expectations.', impact: 'Primary Q4 volatility catalyst across sovereign bonds, FX, and duration equities.', transmission: 'Sets the cost-of-capital baseline for 2027 enterprise AI, biotech, and grid budgets.' }
+    const MONTHS = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+    const DAY_MS = 86400000;
+
+    let currentPage = 0;
+    let lastUpdatedLabel = '';
+    let renderedDayKey = '';
+
+    // Baseline data (status is recomputed at runtime; the values here are placeholders)
+    let rawEvents = [
+      { date: '2026-11-12', headline: 'US Core CPI Print', delta: '+0.2% MoM · In-Line', cause: 'Shelter disinflation offset sticky core services, keeping annual core inflation anchored near 2.8%.', impact: '2Y Treasury yield eased 6bps as near-term hike tail risk faded from OIS pricing.', transmission: 'Relieved duration pressure on long-cycle Biotech and software valuations.' },
+      { date: '2026-11-13', headline: 'US PPI Wholesale', delta: '+0.1% MoM · Soft', cause: 'Declining freight and energy input costs compressed pipeline goods inflation.', impact: 'Reinforced market consensus for a measured Fed easing path into 2027.', transmission: 'Improved gross margin outlook for industrial hardware and power equipment makers.' },
+      { date: '2026-11-15', headline: 'US Retail Sales', delta: '+0.4% MoM · Beat', cause: 'Resilient upper-income spending and early holiday e-commerce demand outperformed consensus.', impact: '10Y yield climbed 5bps as soft-landing growth expectations strengthened.', transmission: 'Supported cyclical rotation while keeping real rates elevated for capital-intensive grids.' },
+      { date: '2026-11-18', headline: '10Y Treasury Auction', delta: '4.28% · Tail +1.8bp', cause: 'Primary dealer takedown rose amid ongoing fiscal deficit supply concerns.', impact: 'Term premium widened slightly, steepening the 2s10s curve by 4bps.', transmission: 'Tightened financing spreads for mid-cap infrastructure and defense contractors.' },
+      { date: '2026-11-19', headline: 'NVIDIA Q3 Earnings', delta: 'Rev +58% YoY · Beat', cause: 'Hyperscaler capex for next-gen rack-scale AI clusters exceeded supply allocations.', impact: 'Triggered broad risk-on flows across US equity indices and semiconductor ETFs.', transmission: 'Accelerated optical interconnect, CoWoS packaging, and data center power grid bottlenecks.' },
+      { date: '2026-11-24', headline: 'FOMC Minutes Release', delta: 'Rate Hold · Neutral', cause: 'Committee members debated the neutral rate ceiling amid resilient productivity gains.', impact: 'Front-end yields remain range-bound; dollar index stabilizes near 104.2.', transmission: 'Markets pivot focus from rate trajectory to sector-level earnings durability and capex ROI.' },
+      { date: '2026-11-26', headline: 'Core PCE Price Index', delta: 'Est. +0.2% MoM', cause: 'Fed’s preferred inflation gauge will confirm whether healthcare and insurance costs moderated.', impact: 'A 0.1% downside surprise could unlock a 10–15bp rally in long-end Treasuries.', transmission: 'Direct catalyst for rate-sensitive Biotech funding windows and utility capex multiples.' },
+      { date: '2026-12-01', headline: 'ISM Manufacturing PMI', delta: 'Est. 49.6 · Rebound', cause: 'New orders sub-index watched closely for signs of industrial restocking cycle.', impact: 'A print above 50.0 would lift cyclical yields and industrial commodities.', transmission: 'Key barometer for Power & Grid transformers, copper demand, and defense supply chains.' },
+      { date: '2026-12-04', headline: 'US Nonfarm Payrolls', delta: 'Est. +165K · 4.1%', cause: 'Labor market cooling pace and average hourly earnings will anchor December FOMC odds.', impact: 'High-volatility event for 2Y yields and USD liquidity conditions.', transmission: 'Shapes consumer credit stability and broad equity risk premia heading into year-end.' },
+      { date: '2026-12-10', headline: 'ECB Policy Decision', delta: 'Est. -25bps Cut', cause: 'Weak Eurozone industrial output widens policy divergence versus the Federal Reserve.', impact: 'Potential EUR/USD pressure and cross-border capital inflows into US credit.', transmission: 'Favors US-domiciled defense and AI infrastructure leaders with global pricing power.' },
+      { date: '2026-12-16', headline: 'FOMC Rate Decision', delta: 'Est. Hold · Dot Plot', cause: 'Updated Summary of Economic Projections (SEP) will reset 2027 terminal rate expectations.', impact: 'Primary Q4 volatility catalyst across sovereign bonds, FX, and duration equities.', transmission: 'Sets the cost-of-capital baseline for 2027 enterprise AI, biotech, and grid budgets.' }
     ];
+
+    let macroEvents = [];
 
     const sectorIcons = {
       'ai-chips': `<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M9 4v3m6-3v3M9 17v3m6-3v3M4 9h3m-3 6h3m10-6h3m-3 6h3"/></svg>`,
@@ -173,25 +189,95 @@
     };
 
     let sectors = [
-      { id: 'ai-chips', title: 'AI & Chips', active: true, isFresh: true, icon: sectorIcons['ai-chips'], news: [{ title: 'Advanced packaging and HBM4 yield bottlenecks tighten Q1 supply', url: '[https://news.google.com](https://news.google.com)', source: 'Reuters' }], thesis: 'Compute bottlenecks are migrating from raw silicon die supply toward optical interconnects and thermal packaging.' },
-      { id: 'rates-bonds', title: 'Rates & Bonds', active: true, isFresh: true, icon: sectorIcons['rates-bonds'], news: [{ title: 'Treasury term premium widens as Q1 refunding calendar approaches', url: '[https://news.google.com](https://news.google.com)', source: 'Bloomberg' }], thesis: 'Long-end yields are increasingly driven by fiscal issuance and term premia rather than near-term inflation prints.' },
-      { id: 'power-grid', title: 'Power & Grid', active: true, isFresh: true, icon: sectorIcons['power-grid'], news: [{ title: 'Utility interconnection queues delay 2027 data center energization', url: '[https://news.google.com](https://news.google.com)', source: 'Bloomberg' }], thesis: 'Physical electricity delivery has overtaken GPU allocation as the binding constraint on AI scaling.' },
-      { id: 'biotech', title: 'Biotech', active: true, isFresh: false, icon: sectorIcons['biotech'], news: [{ title: 'Large-cap pharma M&A targets late-stage oncology and ADC pipelines', url: '[https://news.google.com](https://news.google.com)', source: 'STAT' }], thesis: 'Upcoming 2027–2029 patent cliffs are forcing major pharmaceutical players to deploy cash into de-risked Phase 3 assets.' },
-      { id: 'quantum', title: 'Quantum', active: true, isFresh: false, icon: sectorIcons['quantum'], news: [{ title: 'Logical qubit error-correction milestone lowers physical overhead', url: '[https://news.google.com](https://news.google.com)', source: 'Nature' }], thesis: 'Commercial fault-tolerant compute remains multi-year, but near-term revenue is materializing in post-quantum security.' },
-      { id: 'defense', title: 'Defense', active: true, isFresh: false, icon: sectorIcons['defense'], news: [{ title: 'NATO allies lock in multi-year autonomous drone and air-defense orders', url: '[https://news.google.com](https://news.google.com)', source: 'Reuters' }], thesis: 'Global rearmament has shifted from emergency munition replenishment toward autonomous systems and space-based ISR.' }
+      { id: 'ai-chips', title: 'AI & Chips', active: true, isFresh: true, icon: sectorIcons['ai-chips'], news: [{ title: 'Advanced packaging and HBM4 yield bottlenecks tighten Q1 supply', url: 'https://news.google.com', source: 'Reuters' }], thesis: 'Compute bottlenecks are migrating from raw silicon die supply toward optical interconnects and thermal packaging.' },
+      { id: 'rates-bonds', title: 'Rates & Bonds', active: true, isFresh: true, icon: sectorIcons['rates-bonds'], news: [{ title: 'Treasury term premium widens as Q1 refunding calendar approaches', url: 'https://news.google.com', source: 'Bloomberg' }], thesis: 'Long-end yields are increasingly driven by fiscal issuance and term premia rather than near-term inflation prints.' },
+      { id: 'power-grid', title: 'Power & Grid', active: true, isFresh: true, icon: sectorIcons['power-grid'], news: [{ title: 'Utility interconnection queues delay 2027 data center energization', url: 'https://news.google.com', source: 'Bloomberg' }], thesis: 'Physical electricity delivery has overtaken GPU allocation as the binding constraint on AI scaling.' },
+      { id: 'biotech', title: 'Biotech', active: true, isFresh: false, icon: sectorIcons['biotech'], news: [{ title: 'Large-cap pharma M&A targets late-stage oncology and ADC pipelines', url: 'https://news.google.com', source: 'STAT' }], thesis: 'Upcoming 2027–2029 patent cliffs are forcing major pharmaceutical players to deploy cash into de-risked Phase 3 assets.' },
+      { id: 'quantum', title: 'Quantum', active: true, isFresh: false, icon: sectorIcons['quantum'], news: [{ title: 'Logical qubit error-correction milestone lowers physical overhead', url: 'https://news.google.com', source: 'Nature' }], thesis: 'Commercial fault-tolerant compute remains multi-year, but near-term revenue is materializing in post-quantum security.' },
+      { id: 'defense', title: 'Defense', active: true, isFresh: false, icon: sectorIcons['defense'], news: [{ title: 'NATO allies lock in multi-year autonomous drone and air-defense orders', url: 'https://news.google.com', source: 'Reuters' }], thesis: 'Global rearmament has shifted from emergency munition replenishment toward autonomous systems and space-based ISR.' }
     ];
+
+    /* ---------- helpers ---------- */
+    function esc(v) {
+      return String(v == null ? '' : v)
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    }
+    function safeUrl(u) {
+      return (typeof u === 'string' && /^https?:\/\//i.test(u)) ? u : 'https://news.google.com';
+    }
+    function pad2(n) { return String(n).padStart(2, '0'); }
+    function startOfToday() {
+      const n = new Date();
+      return new Date(n.getFullYear(), n.getMonth(), n.getDate());
+    }
+    function dayKey(d) { return `${d.getFullYear()}-${pad2(d.getMonth() + 1)}-${pad2(d.getDate())}`; }
+
+    // Accepts "YYYY-MM-DD" or "NOV 24" (year inferred as the one closest to today)
+    function parseEventDate(str) {
+      if (!str) return null;
+      const s = String(str).trim();
+      let m = s.match(/^(\d{4})-(\d{1,2})-(\d{1,2})/);
+      if (m) return new Date(+m[1], +m[2] - 1, +m[3]);
+      m = s.match(/^([A-Za-z]{3})[A-Za-z]*\.?\s+(\d{1,2})/);
+      if (!m) return null;
+      const mi = MONTHS.indexOf(m[1].toUpperCase());
+      if (mi < 0) return null;
+      const today = startOfToday();
+      let best = null, bestDiff = Infinity;
+      [today.getFullYear() - 1, today.getFullYear(), today.getFullYear() + 1].forEach(y => {
+        const d = new Date(y, mi, +m[2]);
+        const diff = Math.abs(d - today);
+        if (diff < bestDiff) { best = d; bestDiff = diff; }
+      });
+      return best;
+    }
+    function formatDateLabel(d) { return `${MONTHS[d.getMonth()]} ${pad2(d.getDate())}`; }
+
+    /* ---------- build timeline with live status ---------- */
+    function buildMacroEvents() {
+      const today = startOfToday();
+      const todayTime = today.getTime();
+
+      let list = rawEvents.map(e => {
+        const d = parseEventDate(e.date);
+        let status = e.status || 'upcoming';
+        if (d) {
+          const t = d.getTime();
+          status = t < todayTime ? 'past' : (t === todayTime ? 'today' : 'upcoming');
+        }
+        return { ...e, _time: d ? d.getTime() : 0, date: d ? formatDateLabel(d) : (e.date || ''), status };
+      });
+
+      // No event on today's date -> insert a TODAY marker so the timeline always shows "now"
+      if (!list.some(e => e.status === 'today')) {
+        list.push({
+          marker: true, status: 'today', _time: todayTime,
+          date: formatDateLabel(today), headline: 'Today', delta: 'No scheduled release',
+          cause: '', impact: '', transmission: ''
+        });
+      }
+
+      // Newest/upcoming at top, oldest at bottom (same visual direction as before)
+      list.sort((a, b) => b._time - a._time);
+      macroEvents = list.map((e, i) => ({ ...e, id: `node-${i}` }));
+
+      renderedDayKey = dayKey(today);
+      document.getElementById('macro-month-label').innerText = `${MONTHS[today.getMonth()]} ${today.getFullYear()}`;
+      if (!lastUpdatedLabel) lastUpdatedLabel = `Updated ${formatDateLabel(today)}`;
+    }
 
     async function loadLiveBriefingData() {
       try {
-        const response = await fetch(`./data.json?t=${Date.now()}`);
+        const response = await fetch(`./data.json?t=${Date.now()}`, { cache: 'no-store' });
         if (!response.ok) return;
         const liveData = await response.json();
-        if (liveData.monthLabel) document.getElementById('macro-month-label').innerText = liveData.monthLabel;
         if (liveData.updatedAt) lastUpdatedLabel = `Updated ${liveData.updatedAt}`;
-        if (Array.isArray(liveData.macroEvents) && liveData.macroEvents.length > 0) macroEvents = liveData.macroEvents;
+        if (Array.isArray(liveData.macroEvents) && liveData.macroEvents.length > 0) rawEvents = liveData.macroEvents;
         if (Array.isArray(liveData.sectors) && liveData.sectors.length > 0) {
           sectors = liveData.sectors.map(s => ({
             ...s,
+            news: Array.isArray(s.news) ? s.news : [],
             active: s.active !== undefined ? s.active : true,
             icon: sectorIcons[s.id] || sectorIcons['ai-chips']
           }));
@@ -201,15 +287,7 @@
       }
     }
 
-    function applyReverseChronologicalOrder() {
-      if (macroEvents.length > 1 && macroEvents[0].status === 'past') {
-        macroEvents = [...macroEvents].reverse().map((item, idx) => ({
-          ...item,
-          id: `node-${idx}`
-        }));
-      }
-    }
-
+    /* ---------- timeline render ---------- */
     function renderMacroTimeline() {
       const container = document.getElementById('macro-nodes');
       container.innerHTML = '';
@@ -217,26 +295,24 @@
         const isLeft = index % 2 === 0;
         const isPast = item.status === 'past';
         const isToday = item.status === 'today';
-        let nodeHTML = isToday
+        const clickAttr = item.marker ? '' : `onclick="openMacroModal(${index})"`;
+        const nodeHTML = isToday
           ? `<div class="absolute left-1/2 -translate-x-1/2 w-[18px] h-[18px] rounded-full flex items-center justify-center bg-[#EFEFED] z-10 border-2 border-satin-dark shadow-sm"><div class="w-2 h-2 rounded-full bg-satin-dark"></div></div>`
           : isPast
           ? `<div class="absolute left-1/2 -translate-x-1/2 w-2.5 h-2.5 rounded-full bg-satin-muted/80 z-10 ring-4 ring-[#EFEFED]"></div>`
           : `<div class="absolute left-1/2 -translate-x-1/2 w-3.5 h-3.5 rounded-full flex items-center justify-center bg-[#EFEFED] z-10 border-[1.5px] border-satin-dark/80"></div>`;
-        const todayTagHTML = isToday ? `<span class="inline-block px-1.5 py-0.2 bg-satin-dark text-[8px] font-bold text-white rounded tracking-widest uppercase ml-1 align-middle">TODAY</span>` : '';
+        const todayTagHTML = isToday ? `<span class="inline-block px-1.5 py-[1px] bg-satin-dark text-[8px] font-bold text-white rounded tracking-widest uppercase ml-1 align-middle">TODAY</span>` : '';
         const textColorClass = isToday ? 'text-satin-dark font-bold' : isPast ? 'text-satin-dark/70 font-normal' : 'text-satin-dark font-semibold';
+        const cursorClass = item.marker ? '' : 'cursor-pointer group';
+        const block = (side) => `
+              <span class="text-[9.5px] font-semibold tracking-wider ${isPast ? 'text-satin-muted/70' : 'text-satin-muted'} uppercase block">${esc(item.date)} ${side ? todayTagHTML : ''}</span>
+              <h4 class="text-xs ${textColorClass} leading-snug ${item.marker ? '' : 'group-hover:underline'}">${esc(item.headline)}</h4>
+              <span class="text-[10px] ${isPast ? 'text-satin-dark/60' : 'text-satin-dark/85'} font-medium block mt-0.5">${esc(item.delta)}</span>`;
         container.insertAdjacentHTML('beforeend', `
-          <div id="${item.id}" class="lens-node relative flex items-center justify-between w-full cursor-pointer group py-1.5" onclick="openMacroModal(${index})">
-            <div class="w-[44%] text-right pr-3 ${isLeft ? 'block' : 'invisible'}">
-              <span class="text-[9.5px] font-semibold tracking-wider ${isPast ? 'text-satin-muted/70' : 'text-satin-muted'} uppercase block">${item.date} ${isLeft ? todayTagHTML : ''}</span>
-              <h4 class="text-xs ${textColorClass} leading-snug group-hover:underline">${item.headline}</h4>
-              <span class="text-[10px] ${isPast ? 'text-satin-dark/60' : 'text-satin-dark/85'} font-medium block mt-0.5">${item.delta}</span>
-            </div>
+          <div id="${item.id}" class="lens-node relative flex items-center justify-between w-full ${cursorClass} py-1.5" ${clickAttr}>
+            <div class="w-[44%] text-right pr-3 ${isLeft ? 'block' : 'invisible'}">${block(isLeft)}</div>
             ${nodeHTML}
-            <div class="w-[44%] text-left pl-3 ${!isLeft ? 'block' : 'invisible'}">
-              <span class="text-[9.5px] font-semibold tracking-wider ${isPast ? 'text-satin-muted/70' : 'text-satin-muted'} uppercase block">${item.date} ${!isLeft ? todayTagHTML : ''}</span>
-              <h4 class="text-xs ${textColorClass} leading-snug group-hover:underline">${item.headline}</h4>
-              <span class="text-[10px] ${isPast ? 'text-satin-dark/60' : 'text-satin-dark/85'} font-medium block mt-0.5">${item.delta}</span>
-            </div>
+            <div class="w-[44%] text-left pl-3 ${!isLeft ? 'block' : 'invisible'}">${block(!isLeft)}</div>
           </div>
         `);
       });
@@ -273,16 +349,17 @@
       }
     }
 
+    /* ---------- sectors ---------- */
     function renderSectorGrid() {
       const container = document.getElementById('sector-grid');
       container.innerHTML = '';
       sectors.filter(s => s.active).forEach(sector => {
         const freshDotHTML = sector.isFresh ? `<div class="absolute top-3.5 right-3.5 w-1.5 h-1.5 rounded-full bg-blue-500 shadow-[0_0_6px_rgba(59,130,246,0.6)]"></div>` : '';
         container.insertAdjacentHTML('beforeend', `
-          <div onclick="openSectorDetail('${sector.id}')" class="squircle-card aspect-[1.7/1] p-4 flex flex-col justify-between cursor-pointer relative">
+          <div onclick="openSectorDetail('${esc(sector.id)}')" class="squircle-card aspect-[1.7/1] p-4 flex flex-col justify-between cursor-pointer relative">
             ${freshDotHTML}
             <div class="text-satin-dark/80">${sector.icon}</div>
-            <div class="text-xs font-semibold text-satin-dark tracking-tight">${sector.title}</div>
+            <div class="text-xs font-semibold text-satin-dark tracking-tight">${esc(sector.title)}</div>
           </div>
         `);
       });
@@ -293,14 +370,14 @@
       if (!sector) return;
       document.getElementById('detail-title').innerText = sector.title;
       document.getElementById('detail-updated').innerText = lastUpdatedLabel;
-      document.getElementById('detail-thesis').innerText = sector.thesis;
+      document.getElementById('detail-thesis').innerText = sector.thesis || '';
       const newsListContainer = document.getElementById('detail-news-list');
       newsListContainer.innerHTML = '';
       sector.news.forEach((item, idx) => {
         const headline = typeof item === 'string' ? item : item.title;
         newsListContainer.insertAdjacentHTML('beforeend', `
-          <div onclick="openNewsModal('${sector.id}', ${idx})" class="py-3.5 flex items-center justify-between cursor-pointer group hover:bg-black/[0.02] px-1 transition-colors">
-            <span class="text-[13.5px] font-semibold text-satin-dark tracking-tight leading-snug pr-3 group-hover:text-black">${headline}</span>
+          <div onclick="openNewsModal('${esc(sector.id)}', ${idx})" class="py-3.5 flex items-center justify-between cursor-pointer group hover:bg-black/[0.02] px-1 transition-colors">
+            <span class="text-[13.5px] font-semibold text-satin-dark tracking-tight leading-snug pr-3 group-hover:text-black">${esc(headline)}</span>
             <span class="text-satin-muted/70 text-xs group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-satin-dark transition-transform">↗</span>
           </div>
         `);
@@ -315,14 +392,15 @@
       list.innerHTML = '';
       sectors.forEach(sector => {
         list.insertAdjacentHTML('beforeend', `
-          <div onclick="toggleSector('${sector.id}')" class="flex items-center justify-between px-3.5 py-2.5 rounded-2xl border border-satin-dark/10 bg-white cursor-pointer hover:bg-black/[0.02] transition-colors">
-            <div class="flex items-center space-x-2.5"><span class="text-satin-dark/70">${sector.icon}</span><span class="text-xs font-medium text-satin-dark">${sector.title}</span></div>
+          <div onclick="toggleSector('${esc(sector.id)}')" class="flex items-center justify-between px-3.5 py-2.5 rounded-2xl border border-satin-dark/10 bg-white cursor-pointer hover:bg-black/[0.02] transition-colors">
+            <div class="flex items-center space-x-2.5"><span class="text-satin-dark/70">${sector.icon}</span><span class="text-xs font-medium text-satin-dark">${esc(sector.title)}</span></div>
             <div class="w-9 h-5 rounded-full transition-colors flex items-center px-0.5 ${sector.active ? 'bg-satin-dark justify-end' : 'bg-satin-dark/20 justify-start'}"><div class="w-4 h-4 rounded-full bg-white shadow-sm"></div></div>
           </div>
         `);
       });
     }
 
+    /* ---------- navigation ---------- */
     function goToPage(pageIndex) {
       currentPage = pageIndex;
       document.getElementById('slider').style.transform = `translateX(-${pageIndex * 50}%)`;
@@ -344,11 +422,12 @@
 
     function openMacroModal(index) {
       const item = macroEvents[index];
+      if (!item || item.marker) return;
       document.getElementById('modal-date').innerText = item.date;
       document.getElementById('modal-title').innerText = item.headline + ' (' + item.delta + ')';
-      document.getElementById('modal-cause').innerText = item.cause;
-      document.getElementById('modal-impact').innerText = item.impact;
-      document.getElementById('modal-transmission').innerText = item.transmission;
+      document.getElementById('modal-cause').innerText = item.cause || '';
+      document.getElementById('modal-impact').innerText = item.impact || '';
+      document.getElementById('modal-transmission').innerText = item.transmission || '';
       document.getElementById('macro-modal').classList.remove('opacity-0', 'pointer-events-none');
       document.getElementById('macro-sheet').classList.remove('translate-y-full');
     }
@@ -358,8 +437,17 @@
       document.getElementById('macro-modal').classList.add('opacity-0', 'pointer-events-none');
     }
 
-    function openSectorModal() { renderSectorToggleList(); document.getElementById('sector-modal').classList.remove('opacity-0', 'pointer-events-none'); }
-    function closeSectorModal() { document.getElementById('sector-modal').classList.add('opacity-0', 'pointer-events-none'); }
+    function openSectorModal() {
+      renderSectorToggleList();
+      document.getElementById('sector-modal').classList.remove('opacity-0', 'pointer-events-none');
+      const card = document.getElementById('sector-modal-card');
+      card.classList.remove('scale-95'); card.classList.add('scale-100');
+    }
+    function closeSectorModal() {
+      document.getElementById('sector-modal').classList.add('opacity-0', 'pointer-events-none');
+      const card = document.getElementById('sector-modal-card');
+      card.classList.remove('scale-100'); card.classList.add('scale-95');
+    }
     function toggleSector(sectorId) {
       const sector = sectors.find(s => s.id === sectorId);
       if (sector) { sector.active = !sector.active; renderSectorGrid(); renderSectorToggleList(); }
@@ -371,27 +459,46 @@
       const item = sector.news[newsIndex];
       document.getElementById('news-modal-title').innerText = typeof item === 'string' ? item : item.title;
       document.getElementById('news-modal-source').innerText = typeof item === 'string' ? 'Global Editorial' : (item.source || 'Google News');
-      document.getElementById('news-modal-link').href = typeof item === 'string' ? '[https://news.google.com](https://news.google.com)' : (item.url || '[https://news.google.com](https://news.google.com)');
+      document.getElementById('news-modal-link').href = typeof item === 'string' ? 'https://news.google.com' : safeUrl(item.url);
       document.getElementById('news-modal').classList.remove('opacity-0', 'pointer-events-none');
     }
 
     function closeNewsModal() { document.getElementById('news-modal').classList.add('opacity-0', 'pointer-events-none'); }
 
-    let touchStartX = 0, touchEndX = 0;
+    /* ---------- swipe (horizontal only) ---------- */
+    let touchStartX = 0, touchStartY = 0;
     const mainArea = document.querySelector('main');
-    mainArea.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; }, false);
+    mainArea.addEventListener('touchstart', e => {
+      touchStartX = e.changedTouches[0].screenX;
+      touchStartY = e.changedTouches[0].screenY;
+    }, { passive: true });
     mainArea.addEventListener('touchend', e => {
-      touchEndX = e.changedTouches[0].screenX;
-      if (touchEndX < touchStartX - 40 && currentPage === 0) goToPage(1);
-      if (touchEndX > touchStartX + 40 && currentPage === 1) goToPage(0);
-    }, false);
+      const dx = e.changedTouches[0].screenX - touchStartX;
+      const dy = e.changedTouches[0].screenY - touchStartY;
+      if (Math.abs(dx) < 40 || Math.abs(dx) < Math.abs(dy) * 1.5) return; // ignore vertical-ish gestures
+      if (dx < 0 && currentPage === 0) goToPage(1);
+      else if (dx > 0 && currentPage === 1) goToPage(0);
+    }, { passive: true });
 
-    window.onload = async function() {
+    /* ---------- date rollover ---------- */
+    function refreshForToday(scroll) {
+      buildMacroEvents();
+      renderMacroTimeline();
+      if (scroll) setTimeout(scrollToToday, 150);
+    }
+    function checkDayChanged() {
+      if (dayKey(startOfToday()) !== renderedDayKey) refreshForToday(true);
+    }
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) checkDayChanged(); });
+    window.addEventListener('focus', checkDayChanged);
+    setInterval(checkDayChanged, 60000);
+
+    window.onload = async function () {
       await loadLiveBriefingData();
-      applyReverseChronologicalOrder();
+      buildMacroEvents();
       renderMacroTimeline();
       renderSectorGrid();
-      setTimeout(() => { scrollToToday(); }, 150);
+      setTimeout(scrollToToday, 150);
     };
   </script>
 </body>
